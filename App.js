@@ -8,17 +8,25 @@
  */
 
 import React from "react";
-import { Text, View } from "react-native";
-import Header from "./src/components/header";
+import { StyleSheet, Text, View } from "react-native";
 
-type Props = {};
+import Header from "./src/components/Header";
+import AlbumList from "./src/components/AlbumList";
 
 const App = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Header headerText={"Albums"} />
+      <AlbumList />
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff"
+  }
+});
 
 export default App;
